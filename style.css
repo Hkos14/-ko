@@ -1,0 +1,17 @@
+body {
+    background-color: #a0b1bb; 
+    color: #333;
+}
+.hero {
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+}
+#controls {
+    margin-bottom: 20px;
+}
+#waterChart {
+    max-width: 1000px; /* Növeljük a maximális szélességet */
+    height: 500px;      /* Magasság növelése */
+    margin: auto;
+}
