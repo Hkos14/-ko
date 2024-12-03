@@ -1,5 +1,3 @@
-
-
 CREATE TABLE `Tools` (
   `ID` int(11) NOT NULL,
   `Name` varchar(255) DEFAULT NULL,

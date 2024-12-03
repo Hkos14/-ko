@@ -1,71 +1,64 @@
 async function fetchWaterData() {
+    // Az adatokat a megfelelő PHP fájlból töltjük be
     const response = await fetch('water_data.php');
     const data = await response.json();
     return data;
 }
 
 async function generateChart() {
-    const years = parseInt(document.getElementById('years').value, 10);
+    // Diagram típusának kiválasztása (pl. oszlopdiagram)
     const chartType = document.getElementById('chartType').value;
 
-    // Lekérjük az adatokat és ellenőrizzük a beviteli értéket
+    // Lekérjük az adatokat
     let data = await fetchWaterData();
 
-    // Csak a legutóbbi évek adatait használjuk
-    data = data.slice(-years);
-
-    // Ellenőrizzük, hogy az adatokat számként használjuk
-    const labels = data.map(item => item.year); // Év lehet string, mivel csak tengelycím
-    const producedWater = data.map(item => Number(item.produced_water_volume));
-    const suppliedWater = data.map(item => Number(item.total_supplied_water));
-    const residentialConsumption = data.map(item => Number(item.residential_consumption));
+    // Adatok előkészítése a diagramhoz
+    const labels = data.map(item => item.CountyName); // Megyék nevei
+    const waterConsumption = data.map(item => Number(item.TotalWaterConsumption)); // Összes vízfogyasztás
 
     const ctx = document.getElementById('waterChart').getContext('2d');
     if (window.myChart) {
+        // Ha már van aktív diagram, azt töröljük
         window.myChart.destroy();
     }
 
-    // Diagram létrehozása a megfelelő adattípusokkal és stílusokkal
+    // Új diagram létrehozása
     window.myChart = new Chart(ctx, {
         type: chartType,
         data: {
             labels: labels,
             datasets: [
                 {
-                    label: 'Termelt Víz Mennyisége (ezer m³)',
-                    data: producedWater,
+                    label: 'Megyénkénti vízfogyasztás (m³)',
+                    data: waterConsumption,
                     borderColor: 'blue',
                     backgroundColor: 'rgba(0, 0, 255, 0.2)',
-                    borderWidth: 2, // Vonal vastagsága növelve
-                    fill: chartType === 'line'
-                },
-                {
-                    label: 'Szolgáltatott Víz (ezer m³)',
-                    data: suppliedWater,
-                    borderColor: 'green',
-                    backgroundColor: 'rgba(0, 255, 0, 0.2)',
-                    borderWidth: 2, // Vonal vastagsága növelve
-                    fill: chartType === 'line'
-                },
-                {
-                    label: 'Lakossági Fogyasztás (ezer m³)',
-                    data: residentialConsumption,
-                    borderColor: 'red',
-                    backgroundColor: 'rgba(255, 0, 0, 0.2)',
-                    borderWidth: 2, // Vonal vastagsága növelve
-                    fill: chartType === 'line'
+                    borderWidth: 2, // Vonalak vastagsága
                 }
             ]
         },
         options: {
             responsive: true,
-            title: {
-                display: true,
-                text: 'Víztermelés és Fogyasztás'
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Megyénkénti Vízfogyasztás (m³)'
+                }
             },
             scales: {
-                x: { title: { display: true, text: 'Év' }},
-                y: { title: { display: true, text: 'Víz mennyisége (ezer m³)' }}
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Megyék'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Vízfogyasztás (m³)'
+                    },
+                    beginAtZero: true
+                }
             }
         }
     });

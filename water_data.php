@@ -3,7 +3,15 @@
 require 'connect.php';
 
 // Adatok lekérdezése a táblából
-$query = "SELECT * FROM water_production_and_supply";
+$query = "SELECT 
+Counties.Name AS CountyName,
+SUM(Households.WaterConsumption) AS TotalWaterConsumption
+FROM 
+Counties
+LEFT JOIN Settlements ON Settlements.CountyID = Counties.ID
+LEFT JOIN Streets ON Streets.SettlementID = Settlements.ID
+LEFT JOIN Households ON Households.StreetID = Streets.ID
+GROUP BY Counties.Name;";
 $result = mysqli_query($dbconn, $query);
 
 if (!$result) {
