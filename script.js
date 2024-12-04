@@ -22,6 +22,29 @@ async function generateChart() {
         window.myChart.destroy();
     }
 
+    const barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145",
+        "#ff5733",
+        "#33ff57",
+        "#3357ff",
+        "#ff33a8",
+        "#a833ff",
+        "#ffc133",
+        "#33fff3",
+        "#ff3333",
+        "#33ff9a",
+        "#9a33ff",
+        "#b1ff33",
+        "#33b1ff",
+        "#ff7133",
+        "#7133ff",
+        "#ff3371"
+      ];
+
     // Új diagram létrehozása
     window.myChart = new Chart(ctx, {
         type: chartType,
