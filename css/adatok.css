@@ -1,0 +1,26 @@
+
+/* Középre igazítás */
+.centered-content {
+    display: flex;
+    flex-direction: column; /* A belső elemek függőlegesen rendeződnek */
+    justify-content: center; /* Vertikális középre igazítás */
+    align-items: center; /* Horizontális középre igazítás */
+    height: 100vh; /* Az oldal teljes magasságához igazodik */
+    text-align: center; /* Szöveg középre igazítása */
+}
+#controls{
+    justify-content: center; /* Vertikális középre igazítás */
+    align-items: center; /* Horizontális középre igazítás */
+    text-align: center; /* Szöveg középre igazítása */
+}
+.navbar-nav .nav-link:hover {
+    background-color: rgba(7, 19, 187, 0.18); /* Egeres szín */
+    color: white; /* Fehér szín a szövegre */
+}
+/* Footer stílus */
+.footer {
+    background-color: #17a2b8; /* Bootstrap bg-info szín */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}

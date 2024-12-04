@@ -1,0 +1,124 @@
+ /* Alap dizájn és háttér */
+ body {
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgb(17, 17, 160) 18%, rgba(0,212,255,1) 83%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+}
+#controls {
+    margin-bottom: 20px;
+}
+#waterChart {
+    max-width: 1000px; /* Növeljük a maximális szélességet */
+    height: 500px;      /* Magasság növelése */
+    margin: auto;
+}
+.navbar-nav .nav-link:hover {
+    background-color: rgba(7, 19, 187, 0.18); /* Egeres szín */
+    color: white; /* Fehér szín a szövegre */
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 11px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-card .card-body {
+    padding: 30px;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    color: #0d6efd;
+    margin-right: 20px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info h4 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-info a {
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #004085;
+}
+
+.row{
+    padding-top: 35px;
+}
+
+/* Reszponzív dizájn */
+@media (max-width: 767px) {
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+        /* Térkép középre igazítása */
+        .map-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            flex-direction: column;  /* Térkép és felirat egymás alá */
+            align-items: center;
+            margin-bottom: 49px;
+
+        }
+
+        .map-container h3 {
+            text-align: center;
+            margin-bottom: 20px;  /* Térkép feliratának margója */
+        }
+
+        .map-container iframe {
+            border: 0;
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            text-align: center;
+            justify-content: center
+        }

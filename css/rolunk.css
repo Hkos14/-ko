@@ -1,0 +1,90 @@
+/* Custom CSS for the About Us section */
+body {
+    background-color: #e6e6e6;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar-nav .nav-link:hover {
+    background-color: rgba(7, 19, 187, 0.18); /* Egeres szín */
+    color: white; /* Fehér szín a szövegre */
+}
+.hero {
+    background-color: #fafafa;
+    color: black;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 55px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 30px;
+}
+
+.team-member {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.team-member h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.footer {
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-member img {
+        margin-bottom: 20px;
+    }
+}
