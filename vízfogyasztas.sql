@@ -381,7 +381,7 @@ INSERT INTO `Settlements` (`ID`, `Name`, `CountyID`) VALUES
 (123, 'Esztergom', 11),
 (124, 'Oroszlány', 11),
 (125, 'Kisbér', 11),
-(126, 'Salgótarján', 12),
+(126, 'Hollókő', 12),
 (127, 'Pásztó', 12),
 (128, 'Bátonyterenye', 12),
 (129, 'Szécsény', 12),
