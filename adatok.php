@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./css/adatok.css">
 </head>
 <body>
-<?php 
- include './nav.php'
+<php 
+ include './nav.php';
 ?>
     <main class="centered-content">
         <div class="white-box">
