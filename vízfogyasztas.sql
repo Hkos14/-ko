@@ -124,8 +124,52 @@ INSERT INTO `Households` (`ID`, `StreetID`, `Address`, `WaterConsumption`, `Hous
 (93, 54, 'Rózsa utca 2.', 140, 2, 4),
 (94, 55, 'Napfény utca 1.', 115, 1, 4),
 (95, 55, 'Napfény utca 2.', 100, 3, 5),
-(96, 56, 'Hársfa utca 1.', 125, 1, 2);
-
+(96, 56, 'Hársfa utca 1.', 125, 1, 2),
+(97, 107, 'Fő tér 1.', 120, 1, 4),
+(98, 107, 'Fő tér 2.', 90, 2, 2),
+(99, 107, 'Fő tér 3.', 150, 3, 6),
+(100, 107, 'Fő tér 4.', 60, 4, 1),
+(101, 107, 'Fő tér 5.', 200, 5, 5),
+(102, 108, 'Árpád út 1.', 100, 1, 3),
+(103, 108, 'Árpád út 2.', 180, 2, 2),
+(104, 108, 'Árpád út 3.', 130, 3, 4),
+(105, 108, 'Árpád út 4.', 70, 4, 1),
+(106, 108, 'Árpád út 5.', 220, 5, 6),
+(107, 109, 'Vörösvári út 1.', 140, 1, 4),
+(108, 109, 'Vörösvári út 2.', 95, 2, 3),
+(109, 109, 'Vörösvári út 3.', 160, 3, 5),
+(110, 109, 'Vörösvári út 4.', 85, 4, 2),
+(111, 109, 'Vörösvári út 5.', 210, 5, 7),
+(112, 110, 'Ady Endre út 1.', 125, 1, 4),
+(113, 110, 'Ady Endre út 2.', 100, 2, 2),
+(114, 110, 'Ady Endre út 3.', 145, 3, 5),
+(115, 110, 'Ady Endre út 4.', 75, 4, 1),
+(116, 110, 'Ady Endre út 5.', 230, 5, 6),
+(117, 111, 'Kossuth tér 1.', 115, 1, 3),
+(118, 111, 'Kossuth tér 2.', 85, 2, 2),
+(119, 111, 'Kossuth tér 3.', 155, 3, 5),
+(120, 111, 'Kossuth tér 4.', 95, 4, 2),
+(121, 111, 'Kossuth tér 5.', 220, 5, 6),
+(122, 112, 'Petőfi utca 1.', 140, 1, 4),
+(123, 112, 'Petőfi utca 2.', 110, 2, 3),
+(124, 112, 'Petőfi utca 3.', 165, 3, 6),
+(125, 112, 'Petőfi utca 4.', 80, 4, 2),
+(126, 112, 'Petőfi utca 5.', 240, 5, 7),
+(127, 113, 'Pesti út 1.', 130, 1, 4),
+(128, 113, 'Pesti út 2.', 90, 2, 2),
+(129, 113, 'Pesti út 3.', 145, 3, 5),
+(130, 113, 'Pesti út 4.', 65, 4, 1),
+(131, 113, 'Pesti út 5.', 210, 5, 6),
+(132, 114, 'Rákos út 1.', 125, 1, 3),
+(133, 114, 'Rákos út 2.', 95, 2, 2),
+(134, 114, 'Rákos út 3.', 150, 3, 5),
+(135, 114, 'Rákos út 4.', 70, 4, 1),
+(136, 114, 'Rákos út 5.', 230, 5, 7),
+(137, 115, 'Bartók Béla utca 1.', 135, 1, 4),
+(138, 115, 'Bartók Béla utca 2.', 100, 2, 3),
+(139, 115, 'Bartók Béla utca 3.', 160, 3, 6),
+(140, 115, 'Bartók Béla utca 4.', 75, 4, 2),
+(141, 115, 'Bartók Béla utca 5.', 250, 5, 8);
 
 
 
@@ -208,7 +252,6 @@ CREATE TABLE `Settlements` (
   `Name` varchar(255) DEFAULT NULL,
   `CountyID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
 
 
 
@@ -382,7 +425,11 @@ INSERT INTO `Settlements` (`ID`, `Name`, `CountyID`) VALUES
 (167, 'Budapest II. kerület', 20),
 (168, 'Budapest III. kerület', 20),
 (169, 'Budapest IV. kerület', 20),
-(170, 'Budapest V. kerület', 20);
+(170, 'Budapest V. kerület', 20),
+(171, 'Óbuda', 20),
+(172, 'Kispest', 20),
+(173, 'Rákosmente', 20);
+
 
 
 CREATE TABLE `Streets` (
@@ -500,7 +547,16 @@ INSERT INTO `Streets` (`ID`, `Name`, `SettlementID`) VALUES
 (103, 'Kossuth Lajos tér', 149),
 (104, 'Bartók Béla tér', 150),
 (105, 'Radnóti Miklós tér', 150),
-(106, 'Ady Endre tér', 150);
+(106, 'Ady Endre tér', 150),
+(107, 'Fő tér', 171),
+(108, 'Árpád út', 171),
+(109, 'Vörösvári út', 171),
+(110, 'Ady Endre út', 172),
+(111, 'Kossuth tér', 172),
+(112, 'Petőfi utca', 172),
+(113, 'Pesti út', 173),
+(114, 'Rákos út', 173),
+(115, 'Bartók Béla utca', 173);
 
 ALTER TABLE `Tools`
   ADD PRIMARY KEY (`ID`);
