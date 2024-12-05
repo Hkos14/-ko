@@ -447,7 +447,7 @@ INSERT INTO `Streets` (`ID`, `Name`, `SettlementID`) VALUES
 (3, 'Fő utca', 2),
 (4, 'Petőfi Sándor utca', 3),
 (5, 'Rákóczi út', 4),
-(6, 'Ady Endre utca', 5);
+(6, 'Ady Endre utca', 5),
 (7, 'Bartók Béla utca', 1),
 (8, 'Kossuth tér', 2),
 (9, 'Rákóczi tér', 3),
