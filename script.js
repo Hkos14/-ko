@@ -20,7 +20,7 @@ async function generateChart() {
     if (window.myChart) {
         // Ha már van aktív diagram, azt töröljük
         window.myChart.destroy();
-    }
+    };
 
     const barColors = [
         "#b91d47",
@@ -43,7 +43,7 @@ async function generateChart() {
         "#ff7133",
         "#7133ff",
         "#ff3371"
-      ];
+    ]; 
 
     // Új diagram létrehozása
     window.myChart = new Chart(ctx, {
@@ -53,9 +53,9 @@ async function generateChart() {
             datasets: [
                 {
                     label: 'Megyénkénti vízfogyasztás (m³)',
+                    backgroundColor: barColors,
+                    borderColor: 'red',
                     data: waterConsumption,
-                    borderColor: 'blue',
-                    backgroundColor: 'rgba(0, 0, 255, 0.2)',
                     borderWidth: 2, // Vonalak vastagsága
                 }
             ]

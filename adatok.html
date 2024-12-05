@@ -33,13 +33,11 @@
         <div id="controls">
             
             <label for="chartType">Diagram típusa: </label>
-            <select id="chartType">
+            <select id="chartType" onchange="generateChart()">
                 <option value="bar">Oszlop</option>
                 <option value="line">Vonal</option>
-                <option value="pie">Kör</option>
+                <option value="doughnut">Kör</option>
             </select>
-    
-            <button onclick="generateChart()">Diagram Frissítése</button>
             <canvas id="waterChart"></canvas>
         </div>
     </main>
