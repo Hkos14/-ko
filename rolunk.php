@@ -9,24 +9,9 @@
     <link rel="stylesheet" href="./css/rolunk.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar bg-info" style="border-bottom: 2px solid white; border-left: 2px solid white; border-right: 2px solid white;">
-        <div class="container">
-            <a class="navbar-brand" href="oldal.html">Víztakarékosság</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item"><a class="nav-link" href="adatok.html">Adatok</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./Game/game.html">Játék</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tippek.html">Tippek</a></li>
-                    <li class="nav-item"><a class="nav-link" href="rolunk.html">Rólunk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kapcsolat.html">Elérhetőségeink</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<?php 
+ include './nav.php'
+?>
     <!-- Hero Section -->
     <section class="hero">
         <h1>Rólunk</h1>
@@ -58,6 +43,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
-    <script src="./oldal.js"></script>
 </body>
 </html>
