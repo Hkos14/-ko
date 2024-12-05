@@ -1,22 +1,71 @@
-CREATE TABLE `Tools` (
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2024. Dec 05. 12:04
+-- Kiszolgáló verziója: 10.4.28-MariaDB
+-- PHP verzió: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Adatbázis: `englishoko`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `counties`
+--
+
+CREATE TABLE `counties` (
   `ID` int(11) NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
-  `SmartTool` tinyint(1) DEFAULT NULL
+  `WaterConsumption` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `counties`
+--
 
-INSERT INTO `Tools` (`ID`, `Name`, `SmartTool`) VALUES
-(1, 'Mosógép', 1),
-(2, 'Hűtőszekrény', 1),
-(3, 'Televízió', 0),
-(4, 'Számítógép', 1),
-(5, 'Mikrohullámú sütő', 0),
-(6, 'Klíma', 1),
-(7, 'Okoslámpa', 1),
-(8, 'Porszívó', 0);
+INSERT INTO `counties` (`ID`, `Name`, `WaterConsumption`) VALUES
+(1, 'Bács-Kiskun', NULL),
+(2, 'Baranya', NULL),
+(3, 'Békés', NULL),
+(4, 'Borsod-Abaúj-Zemplén', NULL),
+(5, 'Csongrád-Csanád', NULL),
+(6, 'Fejér', NULL),
+(7, 'Győr-Moson-Sopron', NULL),
+(8, 'Hajdú-Bihar', NULL),
+(9, 'Heves', NULL),
+(10, 'Jász-Nagykun-Szolnok', NULL),
+(11, 'Komárom-Esztergom', NULL),
+(12, 'Nógrád', NULL),
+(13, 'Pest', NULL),
+(14, 'Somogy', NULL),
+(15, 'Szabolcs-Szatmár-Bereg', NULL),
+(16, 'Tolna', NULL),
+(17, 'Vas', NULL),
+(18, 'Veszprém', NULL),
+(19, 'Zala', NULL),
+(20, 'Budapest', NULL);
 
+-- --------------------------------------------------------
 
-CREATE TABLE `Households` (
+--
+-- Tábla szerkezet ehhez a táblához `households`
+--
+
+CREATE TABLE `households` (
   `ID` int(11) NOT NULL,
   `StreetID` int(11) DEFAULT NULL,
   `Address` varchar(255) NOT NULL,
@@ -25,10 +74,11 @@ CREATE TABLE `Households` (
   `ResidentNumber` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `households`
+--
 
-
-
-INSERT INTO `Households` (`ID`, `StreetID`, `Address`, `WaterConsumption`, `HouseholdTypeID`, `ResidentNumber`) VALUES
+INSERT INTO `households` (`ID`, `StreetID`, `Address`, `WaterConsumption`, `HouseholdTypeID`, `ResidentNumber`) VALUES
 (1, 1, 'Andrássy út 1.', 120, 1, 4),
 (2, 1, 'Andrássy út 2.', 90, 2, 2),
 (3, 2, 'Kossuth Lajos utca 3.', 150, 3, 6),
@@ -46,6 +96,21 @@ INSERT INTO `Households` (`ID`, `StreetID`, `Address`, `WaterConsumption`, `Hous
 (15, 14, 'Dózsa György utca 8.', 90, 2, 2),
 (16, 15, 'Deák Ferenc utca 9.', 100, 4, 1),
 (17, 16, 'Hunyadi János utca 10.', 170, 1, 5),
+(18, 17, 'Bajcsy-Zsilinszky utca 1.', 120, 1, 4),
+(19, 18, 'Köztársaság tér 2.', 90, 2, 3),
+(20, 19, 'Szőlőhegy utca 3.', 140, 3, 5),
+(21, 20, 'Kölcsey utca 4.', 75, 4, 2),
+(22, 21, 'Diófa utca 5.', 180, 5, 6),
+(23, 22, 'Széchenyi út 10.', 130, 3, 5),
+(24, 23, 'Árpád utca 20.', 115, 2, 3),
+(25, 24, 'Petőfi tér 3.', 140, 4, 6),
+(26, 25, 'Rákóczi út 5.', 200, 1, 4),
+(27, 26, 'Kossuth Lajos utca 15.', 160, 5, 5),
+(28, 27, 'Kertvárosi út 4.', 125, 2, 4),
+(29, 28, 'Vörösmarty utca 2.', 110, 1, 3),
+(30, 29, 'Béke tér 3.', 145, 5, 6),
+(31, 30, 'Rózsa utca 6.', 175, 4, 5),
+(32, 31, 'Napfény utca 10.', 200, 3, 4),
 (18, 17, 'Fő utca 1.', 120, 1, 3),
 (19, 17, 'Fő utca 2.', 130, 1, 4),
 (20, 18, 'Kossuth Lajos utca 1.', 110, 1, 2),
@@ -171,27 +236,13 @@ INSERT INTO `Households` (`ID`, `StreetID`, `Address`, `WaterConsumption`, `Hous
 (140, 115, 'Bartók Béla utca 4.', 75, 4, 2),
 (141, 115, 'Bartók Béla utca 5.', 250, 5, 8);
 
+-- --------------------------------------------------------
 
+--
+-- Tábla szerkezet ehhez a táblához `householdtool`
+--
 
-CREATE TABLE `HouseholdTypes` (
-  `ID` int(11) NOT NULL,
-  `Type` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
-
-
-
-INSERT INTO `HouseholdTypes` (`ID`, `Type`) VALUES
-(1, 'Családi ház'),
-(2, 'Panel lakás'),
-(3, 'Társasház'),
-(4, 'Albérlet'),
-(5, 'Luxus villa');
-
-
-
-
-CREATE TABLE `HouseholdTool` (
+CREATE TABLE `householdtool` (
   `ID` int(11) NOT NULL,
   `HouseholdID` int(11) DEFAULT NULL,
   `ToolID` int(11) DEFAULT NULL,
@@ -199,10 +250,11 @@ CREATE TABLE `HouseholdTool` (
   `EndUsage` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `householdtool`
+--
 
-
-
-INSERT INTO `HouseholdTool` (`ID`, `HouseholdID`, `ToolID`, `StartUsage`, `EndUsage`) VALUES
+INSERT INTO `householdtool` (`ID`, `HouseholdID`, `ToolID`, `StartUsage`, `EndUsage`) VALUES
 (1, 1, 1, '2020-01-01', NULL),
 (2, 1, 2, '2019-05-01', NULL),
 (3, 2, 3, '2021-03-15', NULL),
@@ -212,50 +264,45 @@ INSERT INTO `HouseholdTool` (`ID`, `HouseholdID`, `ToolID`, `StartUsage`, `EndUs
 (7, 6, 7, '2022-02-15', NULL),
 (8, 7, 8, '2019-09-20', NULL);
 
+-- --------------------------------------------------------
 
-CREATE TABLE `Counties` (
+--
+-- Tábla szerkezet ehhez a táblához `householdtypes`
+--
+
+CREATE TABLE `householdtypes` (
   `ID` int(11) NOT NULL,
-  `Name` varchar(255) DEFAULT NULL,
-  `WaterConsumption` int(11) DEFAULT NULL
+  `Type` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `householdtypes`
+--
 
+INSERT INTO `householdtypes` (`ID`, `Type`) VALUES
+(1, 'Családi ház'),
+(2, 'Panel lakás'),
+(3, 'Társasház'),
+(4, 'Albérlet'),
+(5, 'Luxus villa');
 
+-- --------------------------------------------------------
 
-INSERT INTO `Counties` (`ID`, `Name`, `WaterConsumption`) VALUES
-(1, 'Bács-Kiskun', NULL),
-(2, 'Baranya', NULL),
-(3, 'Békés', NULL),
-(4, 'Borsod-Abaúj-Zemplén', NULL),
-(5, 'Csongrád-Csanád', NULL),
-(6, 'Fejér', NULL),
-(7, 'Győr-Moson-Sopron', NULL),
-(8, 'Hajdú-Bihar', NULL),
-(9, 'Heves', NULL),
-(10, 'Jász-Nagykun-Szolnok', NULL),
-(11, 'Komárom-Esztergom', NULL),
-(12, 'Nógrád', NULL),
-(13, 'Pest', NULL),
-(14, 'Somogy', NULL),
-(15, 'Szabolcs-Szatmár-Bereg', NULL),
-(16, 'Tolna', NULL),
-(17, 'Vas', NULL),
-(18, 'Veszprém', NULL),
-(19, 'Zala', NULL),
-(20, 'Budapest', NULL);
+--
+-- Tábla szerkezet ehhez a táblához `settlements`
+--
 
-
-
-
-CREATE TABLE `Settlements` (
+CREATE TABLE `settlements` (
   `ID` int(11) NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `CountyID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `settlements`
+--
 
-
-INSERT INTO `Settlements` (`ID`, `Name`, `CountyID`) VALUES
+INSERT INTO `settlements` (`ID`, `Name`, `CountyID`) VALUES
 (1, 'Kecskemét', 1),
 (2, 'Pécs', 2),
 (3, 'Békéscsaba', 3),
@@ -381,7 +428,7 @@ INSERT INTO `Settlements` (`ID`, `Name`, `CountyID`) VALUES
 (123, 'Esztergom', 11),
 (124, 'Oroszlány', 11),
 (125, 'Kisbér', 11),
-(126, 'Hollókő', 12),
+(126, 'Salgótarján', 12),
 (127, 'Pásztó', 12),
 (128, 'Bátonyterenye', 12),
 (129, 'Szécsény', 12),
@@ -430,18 +477,23 @@ INSERT INTO `Settlements` (`ID`, `Name`, `CountyID`) VALUES
 (172, 'Kispest', 20),
 (173, 'Rákosmente', 20);
 
+-- --------------------------------------------------------
 
+--
+-- Tábla szerkezet ehhez a táblához `streets`
+--
 
-CREATE TABLE `Streets` (
+CREATE TABLE `streets` (
   `ID` int(11) NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `SettlementID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `streets`
+--
 
-
-
-INSERT INTO `Streets` (`ID`, `Name`, `SettlementID`) VALUES
+INSERT INTO `streets` (`ID`, `Name`, `SettlementID`) VALUES
 (1, 'Andrássy út', 1),
 (2, 'Kossuth Lajos utca', 1),
 (3, 'Fő utca', 2),
@@ -458,6 +510,21 @@ INSERT INTO `Streets` (`ID`, `Name`, `SettlementID`) VALUES
 (14, 'Dózsa György utca', 8),
 (15, 'Deák Ferenc utca', 9),
 (16, 'Hunyadi János utca', 10),
+(17, 'Bajcsy-Zsilinszky utca', 21),
+(18, 'Köztársaság tér', 22),
+(19, 'Szőlőhegy utca', 23),
+(20, 'Kölcsey utca', 24),
+(21, 'Diófa utca', 25),
+(22, 'Széchenyi út', 26),
+(23, 'Árpád utca', 27),
+(24, 'Petőfi tér', 28),
+(25, 'Rákóczi út', 29),
+(26, 'Kossuth Lajos utca', 30),
+(27, 'Kertvárosi út', 31),
+(28, 'Vörösmarty utca', 32),
+(29, 'Béke tér', 33),
+(30, 'Rózsa utca', 34),
+(31, 'Napfény utca', 35),
 (17, 'Arany János utca', 121),
 (18, 'Petőfi Sándor utca', 121),
 (19, 'Rákóczi Ferenc utca', 121),
@@ -558,54 +625,43 @@ INSERT INTO `Streets` (`ID`, `Name`, `SettlementID`) VALUES
 (114, 'Rákos út', 173),
 (115, 'Bartók Béla utca', 173);
 
-ALTER TABLE `Tools`
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `tools`
+--
+
+CREATE TABLE `tools` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(255) DEFAULT NULL,
+  `SmartTool` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `tools`
+--
+
+INSERT INTO `tools` (`ID`, `Name`, `SmartTool`) VALUES
+(1, 'Mosógép', 1),
+(2, 'Hűtőszekrény', 1),
+(3, 'Televízió', 0),
+(4, 'Számítógép', 1),
+(5, 'Mikrohullámú sütő', 0),
+(6, 'Klíma', 1),
+(7, 'Okoslámpa', 1),
+(8, 'Porszívó', 0);
+
+--
+-- Indexek a kiírt táblákhoz
+--
+
+--
+-- A tábla indexei `tools`
+--
+ALTER TABLE `tools`
   ADD PRIMARY KEY (`ID`);
-
-
-ALTER TABLE `Households`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `StreetID` (`StreetID`),
-  ADD KEY `HouseholdTypeID` (`HouseholdTypeID`);
-
-
-ALTER TABLE `HouseholdTypes`
-  ADD PRIMARY KEY (`ID`);
-
-
-ALTER TABLE `HouseholdTool`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `HouseholdID` (`HouseholdID`),
-  ADD KEY `ToolID` (`ToolID`);
-
-
-ALTER TABLE `Counties`
-  ADD PRIMARY KEY (`ID`);
-
-
-ALTER TABLE `Settlements`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `CountyID` (`CountyID`);
-
-
-ALTER TABLE `Streets`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `SettlementID` (`SettlementID`);
-
-
-ALTER TABLE `Households`
-  ADD CONSTRAINT `Households_ibfk_1` FOREIGN KEY (`StreetID`) REFERENCES `Streets` (`ID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `Households_ibfk_2` FOREIGN KEY (`HouseholdTypeID`) REFERENCES `HouseholdTypes` (`ID`) ON DELETE SET NULL;
-
-
-ALTER TABLE `HouseholdTool`
-  ADD CONSTRAINT `HouseholdTool_ibfk_1` FOREIGN KEY (`HouseholdID`) REFERENCES `Households` (`ID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `HouseholdTool_ibfk_2` FOREIGN KEY (`ToolID`) REFERENCES `Tools` (`ID`) ON DELETE CASCADE;
-
-
-ALTER TABLE `Settlements`
-  ADD CONSTRAINT `Settlements_ibfk_1` FOREIGN KEY (`CountyID`) REFERENCES `Counties` (`ID`) ON DELETE CASCADE;
-
-
-ALTER TABLE `Streets`
-  ADD CONSTRAINT `Streets_ibfk_1` FOREIGN KEY (`SettlementID`) REFERENCES `Settlements` (`ID`) ON DELETE CASCADE;
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
