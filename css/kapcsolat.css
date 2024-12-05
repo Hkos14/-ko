@@ -1,6 +1,6 @@
 /* Kapcsolatok oldal háttérkép */
 body {
-   background-image: url(../blue-beautiful-water.jpg);
+    background-image: url(../blue-beautiful-water.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
