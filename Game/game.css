@@ -12,8 +12,9 @@ body {
 #game-container {
     position: relative;
     width: 100vw;
-    height: 80vh;
-    background-color: #eef;
+    height: 70vh;
+    margin-top: 4vw;
+    background-color: rgb(121, 121, 181);
     border: 2px solid #333;
     overflow: hidden;
 }
@@ -22,7 +23,7 @@ body {
     position: absolute;
     bottom: 10px;
     left: 50%;
-    width: 200px;
+    width: 100px;
     height: 20px;background-image: url(cup.png);
     background-size: contain; /* A kép arányosan illeszkedjen */
     background-repeat: no-repeat; /* Ne ismételje a képet */
@@ -55,4 +56,9 @@ body {
     to {
         transform: translateY(100vh);
     }
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(7, 19, 187, 0.18); /* Egeres szín */
+    color: white; /* Fehér szín a szövegre */
 }
