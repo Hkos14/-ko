@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background-color: #eef;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+#catcher {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 200px;
+    height: 20px;background-image: url(cup.png);
+    background-size: contain; /* A kép arányosan illeszkedjen */
+    background-repeat: no-repeat; /* Ne ismételje a képet */
+    background-position: center;
+    background-color: transparent;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.falling-item {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(Droplet.png);
+    background-size: contain; /* A kép arányosan illeszkedjen */
+    background-repeat: no-repeat; /* Ne ismételje a képet */
+    background-position: center;
+    background-color: transparent;
+    animation: fall linear;
+}
+
+#scoreboard {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
