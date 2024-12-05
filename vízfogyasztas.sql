@@ -35,7 +35,7 @@ INSERT INTO `Households` (`ID`, `StreetID`, `Address`, `WaterConsumption`, `Hous
 (4, 3, 'Fő utca 4.', 60, 4, 1),
 (5, 4, 'Petőfi Sándor utca 5.', 200, 5, 5),
 (6, 5, 'Rákóczi út 6.', 180, 1, 3),
-(7, 6, 'Ady Endre utca 7.', 100, 2, 2);
+(7, 6, 'Ady Endre utca 7.', 100, 2, 2),
 (8, 7, 'Bartók Béla utca 1.', 110, 1, 3),
 (9, 8, 'Kossuth tér 2.', 95, 2, 2),
 (10, 9, 'Rákóczi tér 3.', 140, 3, 5),

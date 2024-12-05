@@ -1,11 +1,15 @@
- /* Alap dizájn és háttér */
- body {
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgb(17, 17, 160) 18%, rgba(0,212,255,1) 83%);
-    color: #333;
+/* Kapcsolatok oldal háttérkép */
+body {
+   background-image: url(../blue-beautiful-water.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #333;
 }
+
 
 .hero {
     color: black;
@@ -20,9 +24,12 @@
     height: 500px;      /* Magasság növelése */
     margin: auto;
 }
+.nav-link{
+    color: rgb(0, 0, 0) !important;
+}
 .navbar-nav .nav-link:hover {
     background-color: rgba(7, 19, 187, 0.18); /* Egeres szín */
-    color: white; /* Fehér szín a szövegre */
+    color: rgb(0, 0, 0); /* Fehér szín a szövegre */
 }
 .section-header {
     text-align: center;
@@ -32,11 +39,18 @@
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: #0d6efd;
+    color: #000000;
     text-transform: uppercase;
     font-weight: bold;
 }
-
+.white-box {
+    background-color: white; /* Fehér háttér */
+    padding: 20px;           /* Térköz a tartalom körül */
+    border-radius: 10px;     /* Lekerekített sarkok */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Finom árnyék */
+    margin: 20px auto;       /* Középre igazított margó */
+    max-width: 800px;        /* Maximális szélesség */
+}
 .contact-card {
     background-color: #ffffff;
     border-radius: 8px;
