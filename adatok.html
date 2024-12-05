@@ -12,7 +12,7 @@
 <!-- Navigation -->
 <nav class="navbar bg-info" style="border-bottom: 2px solid white; border-left: 2px solid white; border-right: 2px solid white;">
     <div class="container">
-        <a class="navbar-brand" href="#">Víztakarékosság</a>
+        <a class="navbar-brand" href="oldal.html">Víztakarékosság</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,16 +28,28 @@
     </div>
 </nav>
     <main class="centered-content">
-        <!-- Map -->
-        <h2 id="cim">Vízfogyasztási Adatok Diagram</h2>
-        <div id="controls">
+        <div class="white-box">
+            <!-- Map -->
+            <h2 id="cim">Vízfogyasztási Adatok Diagram</h2>
+            <div id="controls">
             
+<<<<<<< Updated upstream
             <label for="chartType">Diagram típusa: </label>
             <select id="chartType" onchange="generateChart()">
                 <option value="bar">Oszlop</option>
                 <option value="doughnut">Kör</option>
             </select>
             <canvas id="waterChart"></canvas>
+=======
+                <label for="chartType">Diagram típusa: </label>
+                <select id="chartType" onchange="generateChart()">
+                    <option value="bar">Oszlop</option>
+                    <option value="line">Vonal</option>
+                    <option value="doughnut">Kör</option>
+                </select>
+                <canvas id="waterChart"></canvas>
+            </div>
+>>>>>>> Stashed changes
         </div>
     </main>
 

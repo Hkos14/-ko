@@ -1,3 +1,13 @@
+body {
+    background-image: url(../blue-beautiful-water.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
 
 /* Középre igazítás */
 .centered-content {
@@ -7,6 +17,14 @@
     align-items: center; /* Horizontális középre igazítás */
     height: 100vh; /* Az oldal teljes magasságához igazodik */
     text-align: center; /* Szöveg középre igazítása */
+}
+.white-box {
+    background-color: white; /* Fehér háttér */
+    padding: 20px;           /* Térköz a tartalom körül */
+    border-radius: 10px;     /* Lekerekített sarkok */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Finom árnyék */
+    margin: 20px auto;       /* Középre igazított margó */
+    max-width: 800px;        /* Maximális szélesség */
 }
 #controls{
     justify-content: center; /* Vertikális középre igazítás */
