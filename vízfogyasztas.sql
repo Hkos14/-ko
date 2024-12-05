@@ -574,8 +574,8 @@ ALTER TABLE `HouseholdTypes`
 
 ALTER TABLE `HouseholdTool`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `HaztartasID` (`HaztartasID`),
-  ADD KEY `EszkozID` (`EszkozID`);
+  ADD KEY `HouseholdID` (`HouseholdID`),
+  ADD KEY `ToolID` (`ToolID`);
 
 
 ALTER TABLE `Counties`
@@ -597,9 +597,9 @@ ALTER TABLE `Households`
   ADD CONSTRAINT `Households_ibfk_2` FOREIGN KEY (`TypeID`) REFERENCES `HouseholdTypes` (`ID`) ON DELETE SET NULL;
 
 
-ALTER TABLE `lakaseszkoz`
-  ADD CONSTRAINT `lakaseszkoz_ibfk_1` FOREIGN KEY (`HouseholdID`) REFERENCES `Households` (`ID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `lakaseszkoz_ibfk_2` FOREIGN KEY (`ToolID`) REFERENCES `Tools` (`ID`) ON DELETE CASCADE;
+ALTER TABLE `HouseholdTool`
+  ADD CONSTRAINT `HouseholdTool_ibfk_1` FOREIGN KEY (`HouseholdID`) REFERENCES `Households` (`ID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `HouseholdTool_ibfk_2` FOREIGN KEY (`ToolID`) REFERENCES `Tools` (`ID`) ON DELETE CASCADE;
 
 
 ALTER TABLE `Settlements`
