@@ -11,7 +11,7 @@ body {
 
 #game-container {
     position: relative;
-    width: 100vw;
+    width: 90vw;
     height: 70vh;
     margin-top: 4vw;
     background-color: rgb(121, 121, 181);
@@ -24,10 +24,12 @@ body {
     bottom: 10px;
     left: 50%;
     width: 100px;
-    height: 20px;background-image: url(cup.png);
+    height: 70px;
+    background-image: url(cup.png);
     background-size: contain; /* A kép arányosan illeszkedjen */
     background-repeat: no-repeat; /* Ne ismételje a képet */
     background-position: center;
+    background-size: 50px;
     background-color: transparent;
     transform: translateX(-50%);
     border-radius: 5px;
