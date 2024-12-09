@@ -31,6 +31,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 header('Content-Type: application/json');
 echo json_encode($water_data);
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Adatbázis kapcsolat bezárása
-mysqli_close($dbconn);
+//mysqli_close($dbconn);
 

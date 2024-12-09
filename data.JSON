@@ -1,0 +1,82 @@
+[
+    {
+      "CountyName": "Bács-Kiskun",
+      "TotalWaterConsumption": "4260"
+    },
+    {
+      "CountyName": "Baranya",
+      "TotalWaterConsumption": "2155"
+    },
+    {
+      "CountyName": "Békés",
+      "TotalWaterConsumption": "340"
+    },
+    {
+      "CountyName": "Borsod-Abaúj-Zemplén",
+      "TotalWaterConsumption": "255"
+    },
+    {
+      "CountyName": "Budapest",
+      "TotalWaterConsumption": "6120"
+    },
+    {
+      "CountyName": "Csongrád-Csanád",
+      "TotalWaterConsumption": "280"
+    },
+    {
+      "CountyName": "Fejér",
+      "TotalWaterConsumption": "130"
+    },
+    {
+      "CountyName": "Győr-Moson-Sopron",
+      "TotalWaterConsumption": "150"
+    },
+    {
+      "CountyName": "Hajdú-Bihar",
+      "TotalWaterConsumption": "90"
+    },
+    {
+      "CountyName": "Heves",
+      "TotalWaterConsumption": "100"
+    },
+    {
+      "CountyName": "Jász-Nagykun-Szolnok",
+      "TotalWaterConsumption": "170"
+    },
+    {
+      "CountyName": "Komárom-Esztergom",
+      "TotalWaterConsumption": "5790"
+    },
+    {
+      "CountyName": "Nógrád",
+      "TotalWaterConsumption": "3680"
+    },
+    {
+      "CountyName": "Pest",
+      "TotalWaterConsumption": "2350"
+    },
+    {
+      "CountyName": "Somogy",
+      "TotalWaterConsumption": null
+    },
+    {
+      "CountyName": "Szabolcs-Szatmár-Bereg",
+      "TotalWaterConsumption": null
+    },
+    {
+      "CountyName": "Tolna",
+      "TotalWaterConsumption": null
+    },
+    {
+      "CountyName": "Vas",
+      "TotalWaterConsumption": null
+    },
+    {
+      "CountyName": "Veszprém",
+      "TotalWaterConsumption": null
+    },
+    {
+      "CountyName": "Zala",
+      "TotalWaterConsumption": null
+    }
+  ]

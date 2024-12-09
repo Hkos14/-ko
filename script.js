@@ -1,6 +1,6 @@
 async function fetchWaterData() {
     // Az adatokat a megfelelő PHP fájlból töltjük be
-    const response = await fetch('water_data.php');
+    const response = await fetch('waterdata.php');
     const data = await response.json();
     return data;
 }
