@@ -24,17 +24,18 @@
         
         <div class="team-member">
             <div>
-                <h3>Ákos</h3>
-                <p>Ákos vagyok, a projekt vezetője. A víztakarékosság iránti elkötelezettségem segített elindítani ezt az oldalt, hogy felhívjuk a figyelmet a víz fontosságára és a tudatos fogyasztásra.</p>
+                <h3>Máté</h3>
+                <p>Máté vagyok, a projekt technikai részeért vagyok felelős. Szeretek új technológiákkal kísérletezni, és ezen az oldalon is próbálom a legjobb megoldásokat nyújtani a felhasználóink számára.</p>
             </div>
         </div>
 
         <div class="team-member">
             <div>
-                <h3>Máté</h3>
-                <p>Máté vagyok, a projekt technikai oldalaért felelős tulajdonos. Szeretek új technológiákkal kísérletezni, és ezen az oldalon is próbálom a legjobb megoldásokat nyújtani a felhasználóink számára.</p>
+                <h3>Ákos</h3>
+                <p>Ákos vagyok, a projekt megjelenéseért vagyok felelős. A víztakarékosság iránti elkötelezettségünk miatt elindítottuk ezt a weboldalt, hogy felhívjuk a figyelmet a víz fontosságára és a tudatos fogyasztásra.</p>
             </div>
         </div>
+
     </div>
     <!-- Footer -->
     <footer class="text-white text-center py-3" style="position: sticky; bottom: 0; width: 100%; margin: 0">

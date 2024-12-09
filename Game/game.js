@@ -2,14 +2,16 @@
 const gameContainer = document.getElementById("game-container");
 const catcher = document.getElementById("catcher");
 const scoreDisplay = document.getElementById("score");
+const gameWidth = gameContainer.offsetWidth; 
+const catcherWidth = catcher.offsetWidth; 
 
 let score = 0;
-let gameWidth = gameContainer.offsetWidth;
-let catcherWidth = catcher.offsetWidth;
+//let gameWidth = gameContainer.offsetWidth;
+//let catcherWidth = catcher.offsetWidth;
 let fallingSpeed = 3000; // Hullás idő ms-ban
 
 // Catcher mozgatása
-document.addEventListener("mousemove", (e) => {
+gameContainer.addEventListener("mousemove", (e) => {
     const rect = gameContainer.getBoundingClientRect();
     let x = e.clientX - rect.left - catcherWidth / 2;
 
@@ -17,6 +19,14 @@ document.addEventListener("mousemove", (e) => {
     x = Math.max(0, Math.min(x, gameWidth - catcherWidth));
     catcher.style.left = `${x}px`;
 });
+/*document.addEventListener("mousemove", (e) => {
+    const rect = gameContainer.getBoundingClientRect();
+    let x = e.clientX - rect.left - catcherWidth / 2;
+
+    // Határok ellenőrzése
+    x = Math.max(0, Math.min(x, gameWidth - catcherWidth));
+    catcher.style.left = `${x}px`;
+});*/
 
 // Hulló elemek hozzáadása
 function createFallingItem() {

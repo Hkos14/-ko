@@ -2,7 +2,9 @@
 
 <nav class="navbar bg-info" style="border-bottom: 2px solid white; border-left: 2px solid white; border-right: 2px solid white;">
     <div class="container">
-        <a class="navbar-brand" href="oldal.php">Víztakarékosság</a>
+        <a class="navbar-brand" href="oldal.php">
+            <img src="vizcsepp-es-level-termeszeti-elemek-logoja-v_242304-original.webp" alt="Vízcsepp ikon" style="height: 30px; margin-right: 8px;"> Víztakarékosság
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>

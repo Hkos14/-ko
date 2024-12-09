@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vízfogyasztás és Víztakarékosság</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adatok.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
 
     <main class="centered-content">
         <div class="white-box">
-            <!-- Map -->
+            <!-- Diagramm-+ -->
             <h2 id="cim">Vízfogyasztási Adatok Diagram</h2>
             <div id="controls">
             
@@ -32,7 +32,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg-info text-white text-center py-3" style="position: sticky; bottom: 0; width: 100%; margin: 0;">
+    <footer class="text-white text-center py-3" style="position: sticky; bottom: 0; width: 100%; margin: 0;">
         <p>&copy; 2024 Vízfogyasztás és Víztakarékosság</p>
     </footer>
 
