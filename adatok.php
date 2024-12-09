@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -5,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vízfogyasztás és Víztakarékosság</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./css/adatok.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/adatok.css">
 </head>
 <body>
-<php 
- include './nav.php';
+<?php 
+ include 'nav.php';
 ?>
+
     <main class="centered-content">
         <div class="white-box">
             <!-- Map -->
@@ -36,6 +38,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

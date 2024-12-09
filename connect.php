@@ -1,6 +1,6 @@
 <?php
 $server = "localhost";
-$username = "username";
+$username = "root";
 $password = "";
 $database = "englishoko";
 
